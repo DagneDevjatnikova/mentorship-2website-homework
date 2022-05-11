@@ -82,6 +82,13 @@ html {
   margin-bottom: 20px;
 }
 .answer {
+  font-size: 20px;
+}
+.answer-hidden {
+  display: none;
+}
+.answer-visible {
+  display: initial;
 }
 /* FAQ END*/
 /* VIDEO START */
