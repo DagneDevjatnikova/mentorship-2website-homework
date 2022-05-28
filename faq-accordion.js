@@ -17,7 +17,20 @@ const faqList = () => {
     },
     {
       question: "What kind of Pop-up elements there are?",
-      answer: "Different types:",
+      answer: `Different types:,
+      <ul>
+      <li>Box and cylinder</li>
+      <li>Carousel</li>
+      <li>Dissolving images and slats</li>
+      <li>Flap or lift the flap</li>
+      <li>Floating layers or platforms</li>
+      <li>Leporello</li>
+      <li>Pull-tab</li>
+      <li>Tunnel book or peep-show</li>
+      <li>V-fold</li>
+      <li>Volvelle or wheel</li>
+      <li>Waterfall</li>
+    </ul>`,
     },
     {
       question: "Lorem ipsum ?",
