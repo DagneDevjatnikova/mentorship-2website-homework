@@ -72,6 +72,7 @@ html {
 
   padding: 40px 100px;
 }
+
 .question-container {
   margin-bottom: 40px;
 }
@@ -80,15 +81,47 @@ html {
   font-weight: bold;
 
   margin-bottom: 20px;
+
+  /* display: block; */
+  /* pultiņu novietošana*/
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+/* ar šo nenotiek shifting text whwn hover */
+.question-interactive {
+  border-radius: 10px;
+  padding: 10px 10px;
+  border: 1px solid transparent; /* ar šo nenotiek shifting text whwn hover */
+  cursor: pointer;
+  transition: border 0.5s;
+}
+.question-interactive:hover {
+  border: 1px solid #fab005;
 }
 .answer {
   font-size: 20px;
+  max-height: 0;
+  /* overflow: hidden; */
+  /* transition: max-height 1.4s ease; */
+
+  padding-left: 30px;
+  max-height: fit-content;
+  /* overflow: hidden; */
+  transition: max-height 0.5s;
 }
 .answer-hidden {
   display: none;
+
+  /* max-height: 0px; */
 }
 .answer-visible {
   display: initial;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-height: fit-content;
 }
 /* FAQ END*/
 /* VIDEO START */
