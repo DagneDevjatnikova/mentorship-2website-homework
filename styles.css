@@ -8,6 +8,35 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* BUTTON GRID starts */
+.btn-container-for-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+.button-container {
+  width: auto;
+  height: auto;
+  /* CSS GRID */
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto auto;
+  /* gap: 50px; */
+  row-gap: 40px;
+  column-gap: 20px;
+
+  /* Aligning tracks inside container */
+  /* justify-content: center;
+  align-content: space-between; */
+
+  /* aligning items INSIDE cells */
+  align-items: center;
+  justify-items: center;
+}
 .button {
   background-color: #fab005;
   color: white;
@@ -18,6 +47,17 @@ html {
   border: 1px solid #fab005;
   padding: 15px 30px;
 }
+.learn-more {
+  grid-column: 1 / -1;
+}
+.button-show {
+  grid-column: 1/2;
+  grid-row: 2 / 3;
+}
+.button-hide {
+  grid-column: 2/3;
+  grid-row: 2 / 3;
+}
 .button:hover {
   background-color: white;
   color: black;
@@ -26,7 +66,7 @@ html {
 .highlighted-text:hover {
   text-decoration: underline;
 }
-
+/* BUTTON GRID end */
 /* REUSABLE STYLINGS START  END*/
 /* INTRO SLIDE START */
 .intro {
@@ -59,11 +99,7 @@ html {
 }
 /* INTRO SLIDE END */
 /* LEARN MORE  */
-.learn-more {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-}
+
 /* LEARN MORE END */
 /* FAQ START */
 .faq {
