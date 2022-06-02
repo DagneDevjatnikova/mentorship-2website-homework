@@ -1,0 +1,29 @@
+@use "variables.scss" as v;
+.intro {
+  height: 320px;
+  color: white;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("Capture.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-heading {
+  font-size: v.$headingFont-size;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.intro-description {
+  text-align: center;
+  font-size: v.$secondaryFont-size;
+
+  padding-left: 100px;
+  padding-right: 100px;
+}

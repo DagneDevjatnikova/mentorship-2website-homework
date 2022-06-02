@@ -1,0 +1,60 @@
+@use "variables.scss" as v;
+.faq {
+  background-color: v.$secondaryColor;
+  color: black;
+
+  padding: 40px 100px;
+  display: inline-block;
+}
+
+.question-container {
+  margin-bottom: 40px;
+}
+.question {
+  font-size: v.$secondaryFont-size;
+  font-weight: bold;
+
+  margin-bottom: 20px;
+
+  /* display: block; */
+  /* pultiņu novietošana*/
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+/* ar šo nenotiek shifting text whwn hover */
+.question-interactive {
+  border-radius: 10px;
+  padding: 10px 10px;
+  border: 1px solid transparent; /* ar šo nenotiek shifting text whwn hover */
+  cursor: pointer;
+  transition: border 0.5s;
+}
+.question-interactive:hover {
+  border: 1px solid v.$primaryColor;
+}
+.answer {
+  font-size: v.$primaryFont-size;
+  max-height: 0;
+  /* overflow: hidden; */
+  /* transition: max-height 1.4s ease; */
+
+  padding-left: 30px;
+  max-height: fit-content;
+  /* overflow: hidden; */
+  transition: max-height 0.5s;
+  /* display: block; */
+}
+.answer-hidden {
+  display: none;
+
+  /* max-height: 0px; */
+}
+.answer-visible {
+  display: initial;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-height: fit-content;
+}

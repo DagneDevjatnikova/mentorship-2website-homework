@@ -1,123 +1,19 @@
-/* 20px, 25px, 30px, 45px (biggest one only for main heading) */
-/* REUSABLE STYLINGS START */
-body {
-  font-family: "Rubik", sans-serif;
-  font-size: 20px;
-  line-height: 1.5;
-}
-html {
-  scroll-behavior: smooth;
-}
-
-/* BUTTON GRID starts */
-.btn-container-for-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-top: 60px;
-  margin-bottom: 30px;
-}
-.button-container {
-  width: auto;
-  height: auto;
-  /* CSS GRID */
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: auto auto;
-  /* gap: 50px; */
-  row-gap: 40px;
-  column-gap: 20px;
-
-  /* Aligning tracks inside container */
-  /* justify-content: center;
-  align-content: space-between; */
-
-  /* aligning items INSIDE cells */
-  align-items: center;
-  justify-items: center;
-}
-.button {
-  background-color: #fab005;
-  color: white;
-  font-size: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 10px;
-  border: 1px solid #fab005;
-  padding: 15px 30px;
-}
-.learn-more {
-  grid-column: 1 / -1;
-}
-.button-show {
-  grid-column: 1/2;
-  grid-row: 2 / 3;
-}
-.button-hide {
-  grid-column: 2/3;
-  grid-row: 2 / 3;
-}
-.button:hover {
-  background-color: white;
-  color: black;
-  transition: all 0.5s;
-}
-.highlighted-text:hover {
-  text-decoration: underline;
-}
-/* BUTTON GRID end */
-/* REUSABLE STYLINGS START  END*/
-/* INTRO SLIDE START */
-.intro {
-  height: 320px;
-  color: white;
-
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("Capture.JPG");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.main-heading {
-  font-size: 45px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-.intro-description {
-  text-align: center;
-  font-size: 25px;
-
-  padding-left: 100px;
-  padding-right: 100px;
-}
-/* INTRO SLIDE END */
-/* LEARN MORE  */
-
-/* LEARN MORE END */
-/* FAQ START */
+@charset "UTF-8";
 .faq {
   background-color: white;
   color: black;
-
   padding: 40px 100px;
+  display: inline-block;
 }
 
 .question-container {
   margin-bottom: 40px;
 }
+
 .question {
   font-size: 25px;
   font-weight: bold;
-
   margin-bottom: 20px;
-
   /* display: block; */
   /* pultiņu novietošana*/
   display: flex;
@@ -129,94 +25,194 @@ html {
 .question-interactive {
   border-radius: 10px;
   padding: 10px 10px;
-  border: 1px solid transparent; /* ar šo nenotiek shifting text whwn hover */
+  border: 1px solid transparent;
+  /* ar šo nenotiek shifting text whwn hover */
   cursor: pointer;
   transition: border 0.5s;
 }
+
 .question-interactive:hover {
   border: 1px solid #fab005;
 }
+
 .answer {
   font-size: 20px;
   max-height: 0;
   /* overflow: hidden; */
   /* transition: max-height 1.4s ease; */
-
   padding-left: 30px;
   max-height: fit-content;
   /* overflow: hidden; */
   transition: max-height 0.5s;
+  /* display: block; */
 }
+
 .answer-hidden {
   display: none;
-
   /* max-height: 0px; */
 }
+
 .answer-visible {
   display: initial;
-
   padding-top: 20px;
   padding-bottom: 20px;
   max-height: fit-content;
 }
-/* FAQ END*/
-/* VIDEO START */
-.video-container {
-  background-color: #fab005;
 
-  /* padding: 100px 100px; */
-  padding-top: 100px;
-  padding-bottom: 40px;
-  padding-left: 100px;
-  padding-right: 100px;
+.btn-container-for-container {
   display: flex;
   align-items: center;
-  flex-direction: column-reverse;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
 
-  /* position: relative;*/ /*lai video butu centrā */
+.button-container {
+  width: auto;
+  height: auto;
+  /* CSS GRID */
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto auto;
+  /* gap: 50px; */
+  row-gap: 40px;
+  column-gap: 20px;
+  /* Aligning tracks inside container */
+  /* justify-content: center;
+  align-content: space-between; */
+  /* aligning items INSIDE cells */
+  align-items: center;
+  justify-items: center;
 }
-.video-heading {
+
+.button {
+  background-color: #fab005;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 1px solid #fab005;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+.button :hover {
+  background-color: white;
+  color: black;
+  transition: all 0.5s;
+}
+
+.learn-more {
+  grid-column: 1/-1;
+}
+
+.button-show {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.button-hide {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.highlighted-text:hover {
+  text-decoration: underline;
+}
+
+.footer {
   text-align: center;
-  padding-top: 20px;
+  font-size: 15px;
+  position: fixed;
+  background-color: #fab005;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  /*kamer nebija šis fexed neko nedeva*/
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-.video-frame {
-  border: 0px;
+
+.footer > a {
+  color: black;
+  text-decoration: none;
 }
-/* VIDEO END */
-/* QUOTE START */
+
+.footer > a:hover {
+  text-decoration: underline;
+}
+
+.intro {
+  height: 320px;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("Capture.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-heading {
+  font-size: 45px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.intro-description {
+  text-align: center;
+  font-size: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
 .quote-container {
   background-color: white;
   text-align: center;
   padding: 100px 100px;
 }
+
 .quote {
   font-size: 30px;
   margin-bottom: 20px;
 }
+
 .author {
   font-size: 15px;
 }
+
 .author-link {
   color: black;
   text-decoration: none;
 }
-/* QUOTE END */
-/* SOCIAL START */
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .social-container {
   background-color: #fab005;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
   padding-bottom: 30px;
 }
 
 .social-heading {
   font-size: 30px;
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 .social-image {
@@ -224,27 +220,71 @@ html {
   height: 80px;
   fill: white;
 }
-/* SOCIAL END */
 
-/* FOOTER START */
-.footer {
-  text-align: center;
-  font-size: 15px;
-  position: fixed;
+.video-container {
   background-color: #fab005;
-  color: #fff;
+  /* padding: 100px 100px; */
+  padding-top: 100px;
+  padding-bottom: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  /* position: relative;*/
+  /*lai video butu centrā */
+}
 
-  position: fixed;
-  width: 100%;
-  bottom: 0; /*kamer nebija šis fexed neko nedeva*/
-  padding-top: 10px;
-  padding-bottom: 10px;
+.video-heading {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 20px;
 }
-.footer > a {
-  color: black;
-  text-decoration: none;
+
+.video-frame {
+  border: 0px;
 }
-.footer > a:hover {
-  text-decoration: underline;
+
+/* .question:hover {
+  cursor: pointer;
+  border: 1px solid #fab005;
+  border-radius: 10px;
+  padding: 10px 10px;
+} */
+/*Question is closed -  When hovered 
+- Chevron should point right 
+- the question should have #ff3980 border indicating it is hovered. */
+.chevron::before {
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: "";
+  display: inline-block;
+  height: 0.45em;
+  left: 0.15em;
+  position: relative;
+  top: 0.15em;
+  transform: rotate(-45deg);
+  vertical-align: top;
+  width: 0.45em;
 }
-/* FOOTER END */
+
+.chevron.right:before {
+  left: 0;
+  transform: rotate(45deg);
+  /* transition: transform 0.5s ease-in; */
+}
+
+/* Question is opened - Chevron should point bottom */
+.chevron.bottom:before {
+  top: 0;
+  transform: rotate(135deg);
+  /* transition: transform 0.5s ease-in; */
+}
+
+.chevron.left:before {
+  left: 0.25em;
+  transform: rotate(-135deg);
+}
+
+/*# sourceMappingURL=styles.css.map */

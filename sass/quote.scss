@@ -1,0 +1,17 @@
+@use "variables.scss" as v;
+.quote-container {
+  background-color: v.$secondaryColor;
+  text-align: center;
+  padding: 100px 100px;
+}
+.quote {
+  font-size: v.$logoFont-size;
+  margin-bottom: 20px;
+}
+.author {
+  font-size: v.$quoteFont-size;
+}
+.author-link {
+  color: black;
+  text-decoration: none;
+}

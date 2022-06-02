@@ -1,0 +1,21 @@
+@use "variables.scss" as v;
+.social-container {
+  background-color: v.$primaryColor;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+
+.social-heading {
+  font-size: v.$logoFont-size;
+  padding-top: 10px;
+}
+
+.social-image {
+  width: v.$logoWidth;
+  height: v.$logoGeight;
+  fill: white;
+}

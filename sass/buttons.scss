@@ -1,0 +1,58 @@
+@use "variables.scss" as v;
+.btn-container-for-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+.button-container {
+  width: auto;
+  height: auto;
+  /* CSS GRID */
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto auto;
+  /* gap: 50px; */
+  row-gap: 40px;
+  column-gap: 20px;
+
+  /* Aligning tracks inside container */
+  /* justify-content: center;
+  align-content: space-between; */
+
+  /* aligning items INSIDE cells */
+  align-items: center;
+  justify-items: center;
+}
+.button {
+  background-color: v.$primaryColor;
+  color: white;
+  font-size: v.$primaryFont-size;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 1px solid v.$primaryColor;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+.button :hover {
+  background-color: v.$secondaryColor;
+  color: black;
+  transition: all 0.5s;
+}
+.learn-more {
+  grid-column: 1 / -1;
+}
+.button-show {
+  grid-column: 1/2;
+  grid-row: 2 / 3;
+}
+.button-hide {
+  grid-column: 2/3;
+  grid-row: 2 / 3;
+}
+.highlighted-text:hover {
+  text-decoration: underline;
+}

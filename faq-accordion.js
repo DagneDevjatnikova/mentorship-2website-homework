@@ -1,3 +1,24 @@
+// The onClick Event - open Get the button, and when the user clicks on it, execute myFunction
+// const button = document.querySelector("#BtnShow");
+// const div = document.querySelector("#faq");
+// // faqList.style.display = "none";
+// button.onclick = () => {
+//   faq.style.display = "block";
+// };
+// const content = document.getElementById("faq");
+// const button = document.getElementById("BtnShow");
+// const entryAnswer = getEntryAnswer(answer);
+// button.onclick = function () {
+//   content.className = "open";
+//   button.getEntryAnswer = "answer";
+// };
+// document.getElementById("myBtn").onclick = function () {
+//   myFunction();
+// };
+// function myFunction() {
+//   document.getElementById("faq").classList.toggle("answer");
+// }
+
 /* HELPER FUNCTIONS */
 
 // Toggle CSS class to show question in HTML

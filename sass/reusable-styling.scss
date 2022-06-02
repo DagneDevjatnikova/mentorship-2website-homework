@@ -1,0 +1,9 @@
+@use "variables.scss" as v;
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: v.$primaryFont-size;
+  line-height: 1.5;
+}
+html {
+  scroll-behavior: smooth;
+}
