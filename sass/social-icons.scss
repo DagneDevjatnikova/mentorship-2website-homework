@@ -7,15 +7,14 @@
   align-items: center;
   gap: 30px;
   padding-bottom: 30px;
-}
+  &-heading {
+    font-size: v.$logoFont-size;
+    padding-top: 10px;
+  }
 
-.social-heading {
-  font-size: v.$logoFont-size;
-  padding-top: 10px;
-}
-
-.social-image {
-  width: v.$logoWidth;
-  height: v.$logoGeight;
-  fill: white;
+  &-image {
+    width: v.$logoWidth;
+    height: v.$logoGeight;
+    fill: white;
+  }
 }

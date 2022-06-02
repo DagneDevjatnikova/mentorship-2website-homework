@@ -1,5 +1,5 @@
 @use "variables.scss" as v;
-.video-container {
+.video {
   background-color: v.$primaryColor;
 
   /* padding: 100px 100px; */
@@ -11,14 +11,14 @@
   align-items: center;
   flex-direction: column-reverse;
 
+  &-heading {
+    color: white;
+    font-size: v.$logoFont-size;
+    text-align: center;
+    padding-top: 20px;
+  }
+  &-frame {
+    border: 0px;
+  }
   /* position: relative;*/ /*lai video butu centrā */
-}
-.video-heading {
-  color: white;
-  font-size: v.$logoFont-size;
-  text-align: center;
-  padding-top: 20px;
-}
-.video-frame {
-  border: 0px;
 }

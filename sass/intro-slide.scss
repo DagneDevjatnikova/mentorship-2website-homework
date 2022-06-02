@@ -13,17 +13,16 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-}
+  &-heading {
+    font-size: v.$headingFont-size;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &-description {
+    text-align: center;
+    font-size: v.$secondaryFont-size;
 
-.main-heading {
-  font-size: v.$headingFont-size;
-  margin-bottom: 20px;
-  text-align: center;
-}
-.intro-description {
-  text-align: center;
-  font-size: v.$secondaryFont-size;
-
-  padding-left: 100px;
-  padding-right: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
