@@ -20,7 +20,7 @@
   /* pultiņu novietošana*/
   display: flex;
   gap: 24px;
-  align-items: center;
+  // align-items: center;
   /* ar šo nenotiek shifting text whwn hover */
   &-interactive {
     border-radius: 10px;

@@ -47,27 +47,7 @@ obs.observe(sectionIntroEl);
 /* HELPER FUNCTIONS */
 
 // Scrolling
-const allLinks = document.querySelectorAll("a:link");
 
-allLinks.forEach(function (link) {
-  link.addEventListener("click", function (e) {
-    e.preventDefault();
-    const href = link.getAttribute("href");
-
-    // Scroll back to top
-    if (href === "#")
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-
-    // Scroll to other links
-    if (href !== "#" && href.startsWith("#")) {
-      const sectionEl = document.querySelector(href);
-      sectionEl.scrollIntoView({ behavior: "smooth" });
-    }
-  });
-});
 // Toggle CSS class to show question in HTML
 const handleOpenQuestion = (entryQuestion) => {
   // Toggle off className right
@@ -106,7 +86,7 @@ const handleHideOtherQuestions = (currentAnswer) => {
 };
 
 const getAnswerContainer = (entryQuestion, entryAnswer) => {
-  const entryContainer = document.createElement("div");
+  const entryContainer = document.createElement("li");
   entryContainer.className = "question-container";
 
   entryContainer.append(entryQuestion);
@@ -118,7 +98,9 @@ const getAnswerContainer = (entryQuestion, entryAnswer) => {
 const getFaqListContainer = () => {
   // Create pseudocontainer,
   // that does not exist in DOM yet for more performant entry append after we have generated all necessary HTML
-  return document.createElement("div");
+  const container = document.createElement("ul");
+  container.className = "accordion-list";
+  return container;
 };
 
 const getEntryAnswer = (answer) => {
@@ -130,7 +112,7 @@ const getEntryAnswer = (answer) => {
 };
 
 const getEntryQuestion = (question) => {
-  const questionElement = document.createElement("div");
+  const questionElement = document.createElement("button");
   questionElement.className = "question chevron right question-interactive";
   questionElement.innerHTML = question;
 

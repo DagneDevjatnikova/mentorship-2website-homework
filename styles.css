@@ -18,7 +18,6 @@
   /* pultiņu novietošana*/
   display: flex;
   gap: 24px;
-  align-items: center;
   /* ar šo nenotiek shifting text whwn hover */
 }
 .question-interactive {
@@ -322,6 +321,18 @@ html {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.accordion-list {
+  list-style-type: none;
+}
+
+.button.question {
+  font-family: inherit;
+  background: transparent;
+  color: #191635;
+  border: 0;
+  text-transform: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
