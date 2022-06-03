@@ -1,7 +1,7 @@
 @use "variables.scss" as v;
+@use "helpers.scss" as h;
 .btn-container-for-container {
-  display: flex;
-  align-items: center;
+  @include h.centered();
   justify-content: center;
 
   margin-top: 60px;
