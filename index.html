@@ -9,84 +9,97 @@
 <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
   </head>
   <body>
+    <header class="header sticky">
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li><a class="main-nav-link" href="#intro">Home</a></li>
+        <li><a class="main-nav-link" href="#faq">FAQ</a></li>
+        <li><a class="main-nav-link" href="#video">POP-UP</a></li>
+        <li><a class="main-nav-link" href="#social-container">Social media</a></li>
+        <li><a class="main-nav-link" href="#Quote">Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+    <main>
     <!-- Intro slide -->
-    <div class="intro">
-      <div class="intro-heading">POP-UP</div>
+    <section class="intro" id="intro">
+      <h2 class="sr-only">Intro section</h2>
+      <h1 class="intro-heading">POP-UP</h1>
       <div class="intro-description"">Pop-up and movable books have been delighting and engaging readers and non-readers, young and old alike, for nearly 800 years.</div>
-    </div>
+    </section>
    
-   <div class="btn-container-for-container">
-    <div class="button-container">
+   <section class="btn-container-for-container">
+    <section class="button-container">
     <!-- Button learn more -->
-    
       <a class="button learn-more" href="#faq">learn more</a>
-   
     <!-- Button show answers-->
-  
       <!-- html will read onclick="myFunction()" that when click on button there must be a trigger in JS-->
       <button class="button button-show" id="BtnShow">show answers</button>
-    
     <!-- Button hide answers -->
-    
       <button class="button button-hide">hide answers</button>
     
-  </div>
-</div>
+  </section>
+</section>
+
     <!-- Frequently Asked Questions -->
-    <div id="faq" class="faq">
-      </div>
+    <section id="faq" class="faq">
+      <h2 class="sr-only">Questions and answers</h2>
+      </section>
     
     <!-- Video -->
-    <div class="video">
+    <section class="video" id="video">
       <div class="video-heading">
         How Does One Make Pop-Up Books?
       </div>
       <iframe class="video-frame" width="560" height="315" src="https://www.youtube.com/embed/QbsH9_lgh8I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+    </section>
+
 <!-- SOCIAL MEDIA ICONS -->
-<div class="social-container">
+<section class="social-container" id="social-container">
   <div class="social-container-heading">
     Social media
   </div>
   <div>
-    <a target="_blank" href="https://www.facebook.com/mrpopups/">
+    <a target="_blank" href="https://www.facebook.com/mrpopups/" aria-label="Facebook">
       <svg class="social-container-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
         <title>icon</title>
         <path d="M26.34 10C22.45 10 20 12.57 20 16.7v3.8h-3.8a.5.5 0 0 0-.5.5v5.08a.5.5 0 0 0 .5.5H20V37.5a.5.5 0 0 0 .5.5h4.95a.5.5 0 0 0 .5-.5V26.57h3.22a.5.5 0 0 0 .5-.44l.59-5.08a.5.5 0 0 0-.5-.56H26v-3.32c0-1.3.14-1.78 1.59-1.78h2.21a.5.5 0 0 0 .5-.5v-4.2c0-.46 0-.69-3.96-.69zm3 4.38h-1.78c-2.39 0-2.59 1.44-2.59 2.78V21a.5.5 0 0 0 .5.5h3.75l-.47 4.08h-3.28a.5.5 0 0 0-.5.5V37H21V26.07a.5.5 0 0 0-.5-.5h-3.8V21.5h3.83A.5.5 0 0 0 21 21v-4.3c0-3.57 2-5.7 5.31-5.7 1.2 0 2.38.06 3 .12v3.27zM24 .52A23.48 23.48 0 1 0 47.5 24 23.52 23.52 0 0 0 24 .52zm0 46A22.48 22.48 0 1 1 46.5 24 22.51 22.51 0 0 1 24 46.48z"></path>
       </svg>
     </a>
 
-    <a target="_blank" href="https://www.instagram.com/matthewcreinhart/?hl=en">
+    <a target="_blank" href="https://www.instagram.com/matthewcreinhart/?hl=en" aria-label="Instagram">
       <svg class="social-container-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
         <title>icon</title>
         <path d="M24 17.06a6.88 6.88 0 1 0 6.77 6.88A6.83 6.83 0 0 0 24 17.06zm0 12.75a5.88 5.88 0 1 1 5.77-5.88A5.83 5.83 0 0 1 24 29.82zM24 .52A23.48 23.48 0 1 0 47.5 24 23.52 23.52 0 0 0 24 .52zm0 46A22.48 22.48 0 1 1 46.5 24 22.52 22.52 0 0 1 24 46.48zM31.76 14a2.21 2.21 0 1 0 2.19 2.21A2.2 2.2 0 0 0 31.76 14zm0 3.43a1.21 1.21 0 1 1 1.19-1.21 1.2 1.2 0 0 1-1.19 1.17zM30 9.94H18a7.91 7.91 0 0 0-7.84 8V30A7.91 7.91 0 0 0 18 38h12a7.91 7.91 0 0 0 7.84-8V17.9A7.91 7.91 0 0 0 30 9.94zm6.84 20a6.91 6.91 0 0 1-6.84 7H18a6.91 6.91 0 0 1-6.84-7V17.9a6.91 6.91 0 0 1 6.84-7h12a6.91 6.91 0 0 1 6.84 7V30z"></path>  
       </svg>
     </a>
-    <a target="_blank" href="https://twitter.com/matthewreinhar1">
+    <a target="_blank" href="https://twitter.com/matthewreinhar1" aria-label="Twitter">
       <svg class="social-container-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
         <title>icon</title>
         <path d="M24 .52A23.48 23.48 0 1 0 47.5 24 23.52 23.52 0 0 0 24 .52zm0 46A22.48 22.48 0 1 1 46.5 24 22.51 22.51 0 0 1 24 46.48zM37.51 15.8h-.09a2.39 2.39 0 0 0 .28-1.18 1 1 0 0 0-1.57-.74 5.34 5.34 0 0 1-2.73 1 6.45 6.45 0 0 0-10.7 4.72v.32c-5.26-.36-9.46-5.18-9.51-5.23a1 1 0 0 0-.76-.35h-.07a1 1 0 0 0-.77.49 6.06 6.06 0 0 0-.19 6l-.12.05a1 1 0 0 0-.55.87 6.16 6.16 0 0 0 2.08 4.92 1 1 0 0 0-.13.87 6 6 0 0 0 3.56 3.92 9 9 0 0 1-4 .86 10 10 0 0 1-1.52-.1h-.22a1 1 0 0 0-.6 1.8 15.37 15.37 0 0 0 9.1 2.72 18.07 18.07 0 0 0 3.4-.3c12.48-2.86 13.28-13.66 13.29-16.14a12.29 12.29 0 0 0 2.71-3.06 1 1 0 0 0-.89-1.44zm-2.82 4.06a15.23 15.23 0 0 1-12.5 15.61 17.14 17.14 0 0 1-3.19.28 14.35 14.35 0 0 1-8.5-2.48 10.8 10.8 0 0 0 1.69.12A8.58 8.58 0 0 0 18.54 31a5.26 5.26 0 0 1-4.91-3.71 6.17 6.17 0 0 0 1.14.11 2.81 2.81 0 0 0 1.11-.19 5.33 5.33 0 0 1-4.15-5.4 3.86 3.86 0 0 0 1.91.69h.26s-3.81-3.19-1.45-7.16c0 0 4.81 5.6 10.88 5.6h.54a5.27 5.27 0 0 1-.17-1.33 5.39 5.39 0 0 1 5.43-5.34A5.47 5.47 0 0 1 33 15.85h.1a6.31 6.31 0 0 0 3.61-1.16s.09 1.14-2.24 2.91a8 8 0 0 0 3-.81s-.18.75-2.78 3.07z"></path>        </svg>
     </a>
 
-    <a target="_blank" href="https://www.youtube.com/c/MatthewReinhart">
+    <a target="_blank" href="https://www.youtube.com/c/MatthewReinhart" aria-label="YouTube">
       <svg class="social-container-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
         <title>icon</title>
         <path d="M18.38 31.11L30.73 24l-12.35-7.11v14.22zm1-12.49L28.72 24l-9.34 5.38V18.62zm17.17-9.5H11.44A7.94 7.94 0 0 0 3.5 17v14a7.94 7.94 0 0 0 7.94 7.92h25.12A7.94 7.94 0 0 0 44.5 31V17a7.94 7.94 0 0 0-7.94-7.88zM43.5 31a6.94 6.94 0 0 1-6.94 6.92H11.44A6.94 6.94 0 0 1 4.5 31V17a6.94 6.94 0 0 1 6.94-6.92h25.12A6.94 6.94 0 0 1 43.5 17v14z"></path>
       </svg>
     </a>
   </div>
-</div>
+</section>
     <!-- Quote -->
 
-  <div class="quote-container">
-    <div class="quote-container-text">
+  <section class="quote-container" id="Quote">
+    <h2 class="sr-only" >Quote</h2>
+      <div class="quote-container-text">
       “I hear and I forget; I see and I remember; I do and I understand.”
-    </div>
+    
+    
     <div class="author">Confucius
       </div>
-  </div>
-
-      <div class="footer">
+  </section>
+</main>
+      <footer class="footer">
         Made with ❤️ by
         <a
           href="https://github.com/DagneDevjatnikova"
@@ -94,7 +107,7 @@
         >
           Dagne Devjatnikova 
         </a>
-      </div>
+      </footer>
       <script src="faq-accordion.js"></script>
   </body>
 </html>
