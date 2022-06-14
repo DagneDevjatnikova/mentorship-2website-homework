@@ -138,6 +138,14 @@ function myFunction() {
   }
 }
 
+// clear button
+window.addEventListener("load", () => {
+  const button = document.querySelector("#clear");
+  button.addEventListener("click", () => {
+    document.querySelector("#search-input").value = "";
+  });
+});
+
 const faqList = () => {
   const faqData = [
     {
