@@ -20,3 +20,12 @@
     text-transform: none;
   }
 }
+.button {
+  &.question {
+    font-family: inherit;
+    background: transparent;
+    color: #191635;
+    border: 0;
+    text-transform: none;
+  }
+}

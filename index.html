@@ -34,12 +34,16 @@
       <a class="button learn-more" href="#faq">learn more</a>
     <!-- Button show answers-->
       <!-- html will read onclick="myFunction()" that when click on button there must be a trigger in JS-->
-      <button class="button button-show" id="BtnShow">show answers</button>
+      <button onclick="BtnShow()" class="button button-show" id="BtnShow">show answers</button>
     <!-- Button hide answers -->
-      <button class="button button-hide">hide answers</button>
-    
+      <button onclick="BtnClose()" class="button button-hide" id="BtnClose">hide answers</button>
+    <!-- SEARCH BAR -->
+    <div id="search-container">
+    <input class="search-input" type="text" id="search-input" onkeyup="myFunction()" placeholder="Search ..." title="Type in a word">
+    <button class="button button-clear">Clear</button>
+  </div>
   </section>
-</section>
+</section> 
 
     <!-- Frequently Asked Questions -->
     <section id="faq" class="faq">

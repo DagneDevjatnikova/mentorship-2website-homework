@@ -1,24 +1,3 @@
-// The onClick Event - open Get the button, and when the user clicks on it, execute myFunction
-// const button = document.querySelector("#BtnShow");
-// const div = document.querySelector("#faq");
-// // faqList.style.display = "none";
-// button.onclick = () => {
-//   faq.style.display = "block";
-// };
-// const content = document.getElementById("faq");
-// const button = document.getElementById("BtnShow");
-// const entryAnswer = getEntryAnswer(answer);
-// button.onclick = function () {
-//   content.className = "open";
-//   button.getEntryAnswer = "answer";
-// };
-// document.getElementById("myBtn").onclick = function () {
-//   myFunction();
-// };
-// function myFunction() {
-//   document.getElementById("faq").classList.toggle("answer");
-// }
-
 // Sticky navigation
 
 const sectionIntroEl = document.querySelector(".intro");
@@ -118,8 +97,46 @@ const getEntryQuestion = (question) => {
 
   return questionElement;
 };
+// BUTTO SHOW and HIDE answers
+// const button = document.getElementsByClassName("question-container");
 
+function BtnShow() {
+  // get all the answer elements (div.answer)
+  let answers = document.getElementsByClassName("answer");
+  // interate through list of elements
+  for (let index = 0; index < answers.length; index++) {
+    // get element by index
+    let answerElement = answers[index];
+    // show element by removing the class that hides it
+    answerElement.classList.remove("answer-hidden");
+  }
+}
+function BtnClose() {
+  let answerhidden = document.getElementsByClassName("answer");
+  for (let index = 0; index < answerhidden.length; index++) {
+    let answerhiddenElement = answerhidden[index];
+    answerhiddenElement.classList.add("answer-hidden");
+  }
+}
 /* END HELPER FUNCTIONS */
+
+///// SEARCH INPUT ////
+function myFunction() {
+  var input, filter, ul, li, i, txtValue;
+  input = document.getElementById("search-input");
+  filter = input.value.toUpperCase();
+  ul = document.getElementsByClassName("accordion-list");
+  li = ul[0].getElementsByClassName("question-container");
+  for (i = 0; i < li.length; i++) {
+    let button = li[i].getElementsByTagName("button")[0];
+    txtValue = button.textContent || button.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
 
 const faqList = () => {
   const faqData = [
